@@ -1,29 +1,29 @@
 /* app imports */
-import { TAPIResponse, TAlbum } from "../types/index.js";
+import { TAPIResponse, TPhoto } from "../types/index.js";
 import { API_BASE_URL } from "../shared/api-base-url.js";
 
 /* types */
-type TAllAlbumsRes = TAPIResponse & { payload: null | TAlbum[] };
+type TAllPhotosRes = TAPIResponse & { payload: null | TPhoto[] };
 
 /* module */
-async function getAllAlbums(): Promise<TAllAlbumsRes> {
+async function getAllPhotos(): Promise<TAllPhotosRes> {
   try {
     if (typeof fetch !== "function") {
       throw new Error("[Bad]: Global Fetch Not Available");
     } else {
       /* setup and fetch */
-      const API_URL = `${API_BASE_URL}/albums`;
+      const API_URL = `${API_BASE_URL}/photos`;
       const response = await fetch(API_URL);
 
       /* check and return */
       if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.status}`);
       } else {
-        const albums = await response.json();
+        const photos = await response.json();
         return {
           code: "api-ok",
           message: "No errors encountered. Check payload.",
-          payload: albums
+          payload: photos
         };
       }
     }
@@ -31,12 +31,12 @@ async function getAllAlbums(): Promise<TAllAlbumsRes> {
     console.error(error);
     return {
       code: "api-fail",
-      message: "[Bad]: Get All Albums. Encountered Error.",
+      message: "[Bad]: Get All Photos. Encountered Error.",
       payload: null
     }
   }
 }
 
 /* exports */
-export type { TAllAlbumsRes };
-export { getAllAlbums };
+export type { TAllPhotosRes };
+export { getAllPhotos };
