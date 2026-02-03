@@ -1,0 +1,31 @@
+{
+  "name": "jsonplaceholder-api-client",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NPM-Workbench/jsonplaceholder-api-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NPM-Workbench/jsonplaceholder-api-client/issues"
+  },
+  "homepage": "https://github.com/NPM-Workbench/jsonplaceholder-api-client#readme"
+}
