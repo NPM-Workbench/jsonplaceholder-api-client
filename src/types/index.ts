@@ -5,3 +5,4 @@ export type TComment = Record<string, any>;
 export type TAlbum = Record<string, any>;
 export type TPhoto = Record<string, any>;
 export type TTodo = Record<string, any>;
+export type TUser = Record<string, any>;
