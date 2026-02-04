@@ -39,7 +39,7 @@ async function getPostById(props: TInput): Promise<TPostRes> {
     console.error(error);
     return {
       code: "api-fail",
-      message: "[Bad]: Get Album By Id. Encountered Error.",
+      message: "[Bad]: Get Post By Id. Encountered Error.",
       payload: { found: false, post: null }
     }
   }
