@@ -2,6 +2,7 @@
 export * from "./types/index.js";
 export * from "./shared/api-base-url.js";
 export * from "./posts/get-all-posts.js";
+export * from "./posts/get-post-by-id.js";
 export * from "./comments/get-all-comments.js";
 export * from "./comments/get-comment-by-id.js";
 export * from "./albums/get-all-albums.js";
