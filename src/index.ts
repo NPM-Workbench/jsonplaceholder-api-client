@@ -12,3 +12,4 @@ export * from "./photos/get-photo-by-id.js";
 export * from "./todos/get-all-todos.js";
 export * from "./todos/get-todo-by-id.js";
 export * from "./users/get-all-users.js";
+export * from "./users/get-user-by-id.js";
