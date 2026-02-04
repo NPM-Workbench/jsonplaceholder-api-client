@@ -10,4 +10,5 @@ export * from "./albums/get-album-by-id.js";
 export * from "./photos/get-all-photos.js";
 export * from "./photos/get-photo-by-id.js";
 export * from "./todos/get-all-todos.js";
+export * from "./todos/get-todo-by-id.js";
 export * from "./users/get-all-users.js";
