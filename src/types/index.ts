@@ -11,3 +11,4 @@ export type TNewPhoto = Record<string, any>;
 export type TTodo = Record<string, any>;
 export type TNewTodo = Record<string, any>;
 export type TUser = Record<string, any>;
+export type TNewUser = Record<string, any>;
