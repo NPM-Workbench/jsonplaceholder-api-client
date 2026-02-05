@@ -7,7 +7,7 @@ type TInput = {
   id: number,
   data: {id: number, postId: number, name: string, email: string, body: string}
 };
-type TUpdatedCommentRes = TAPIResponse & {
+type TUpdateCommentRes = TAPIResponse & {
   payload: null | {
     updated: boolean,
     comment: TComment | null
@@ -15,7 +15,7 @@ type TUpdatedCommentRes = TAPIResponse & {
 };
 
 /* module */
-async function updateCommentById(props: TInput): Promise<TUpdatedCommentRes> {
+async function updateComment(props: TInput): Promise<TUpdateCommentRes> {
   try {
     if (typeof fetch !== "function") {
       throw new Error("[Bad]: Global Fetch Not Available");
@@ -55,5 +55,5 @@ async function updateCommentById(props: TInput): Promise<TUpdatedCommentRes> {
 }
 
 /* exports */
-export type { TUpdatedCommentRes };
-export { updateCommentById };
+export type { TUpdateCommentRes };
+export { updateComment };

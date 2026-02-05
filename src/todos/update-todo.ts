@@ -1,28 +1,28 @@
 /* node modules */
-import { TAPIResponse, TAlbum } from "../types/index.js";
+import { TAPIResponse, TTodo } from "../types/index.js";
 import { API_BASE_URL } from "../shared/api-base-url.js";
 
 /* types */
 type TInput = {
   id: number,
-  data: { id: number, title: string, userId: number }
+  data: { id: number, userId: number, title: string, completed: boolean }
 };
-type TUpdatedAlbumRes = TAPIResponse & {
+type TUpdateTodoRes = TAPIResponse & {
   payload: null | {
     updated: boolean,
-    album: TAlbum | null
+    todo: TTodo | null
   }
 };
 
 /* module */
-async function updateAlbumById(props: TInput): Promise<TUpdatedAlbumRes> {
+async function updateTodo(props: TInput): Promise<TUpdateTodoRes> {
   try {
     if (typeof fetch !== "function") {
       throw new Error("[Bad]: Global Fetch Not Available");
     } else {
       /* setup and fetch */
       const { id } = props;
-      const API_URL = `${API_BASE_URL}/albums/${id}`;
+      const API_URL = `${API_BASE_URL}/todos/${id}`;
       const response = await fetch(API_URL, {
         method: "PUT",
         body: JSON.stringify(props.data),
@@ -35,8 +35,8 @@ async function updateAlbumById(props: TInput): Promise<TUpdatedAlbumRes> {
       if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
       } else {
-        const album = await response.json();
-        const payload = Object.keys(album).length <= 0 ? {updated: false, album: null} : {updated: true, album};
+        const todo = await response.json();
+        const payload = Object.keys(todo).length <= 0 ? {updated: false, todo: null} : {updated: true, todo};
         return {
           code: "api-ok",
           message: "No errors encountered. Check payload.",
@@ -48,12 +48,12 @@ async function updateAlbumById(props: TInput): Promise<TUpdatedAlbumRes> {
     console.error(error);
     return {
       code: "api-fail",
-      message: "[Bad]: Update Album By Id. Encountered Error.",
-      payload: { updated: false, album: null }
+      message: "[Bad]: Update Todo By Id. Encountered Error.",
+      payload: { updated: false, todo: null }
     }
   }
 }
 
 /* exports */
-export type { TUpdatedAlbumRes };
-export { updateAlbumById };
+export type { TUpdateTodoRes };
+export { updateTodo };

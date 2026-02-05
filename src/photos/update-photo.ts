@@ -7,7 +7,7 @@ type TInput = {
   id: number,
   data: { id: number, albumId: number, title: string, url: string, thumbnailUrl: string }
 };
-type TUpdatedPhotoRes = TAPIResponse & {
+type TUpdatePhotoRes = TAPIResponse & {
   payload: null | {
     updated: boolean,
     photo: TPhoto | null
@@ -15,7 +15,7 @@ type TUpdatedPhotoRes = TAPIResponse & {
 };
 
 /* module */
-async function updatePhotoById(props: TInput): Promise<TUpdatedPhotoRes> {
+async function updatePhoto(props: TInput): Promise<TUpdatePhotoRes> {
   try {
     if (typeof fetch !== "function") {
       throw new Error("[Bad]: Global Fetch Not Available");
@@ -55,5 +55,5 @@ async function updatePhotoById(props: TInput): Promise<TUpdatedPhotoRes> {
 }
 
 /* exports */
-export type { TUpdatedPhotoRes };
-export { updatePhotoById };
+export type { TUpdatePhotoRes };
+export { updatePhoto };

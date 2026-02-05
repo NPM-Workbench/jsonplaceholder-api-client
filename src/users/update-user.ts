@@ -29,7 +29,7 @@ type TInput = {
     }
   }
 };
-type TUpdatedUserRes = TAPIResponse & {
+type TUpdateUserRes = TAPIResponse & {
   payload: null | {
     updated: boolean,
     user: TUser | null
@@ -37,7 +37,7 @@ type TUpdatedUserRes = TAPIResponse & {
 };
 
 /* module */
-async function updateUserById(props: TInput): Promise<TUpdatedUserRes> {
+async function updateUser(props: TInput): Promise<TUpdateUserRes> {
   try {
     if (typeof fetch !== "function") {
       throw new Error("[Bad]: Global Fetch Not Available");
@@ -77,5 +77,5 @@ async function updateUserById(props: TInput): Promise<TUpdatedUserRes> {
 }
 
 /* exports */
-export type { TUpdatedUserRes };
-export { updateUserById };
+export type { TUpdateUserRes };
+export { updateUser };
