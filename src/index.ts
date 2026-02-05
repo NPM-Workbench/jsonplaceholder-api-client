@@ -1,6 +1,7 @@
 /* exports */
 export * from "./types/index.js";
 export * from "./shared/api-base-url.js";
+export * from "./albums/update-album-partial.js";
 export * from "./albums/update-album.js";
 export * from "./albums/get-all-albums.js";
 export * from "./albums/get-album-by-id.js";
