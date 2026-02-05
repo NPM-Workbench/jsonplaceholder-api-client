@@ -7,6 +7,7 @@ export * from "./comments/get-all-comments.js";
 export * from "./comments/get-comment-by-id.js";
 export * from "./albums/get-all-albums.js";
 export * from "./albums/get-album-by-id.js";
+export * from "./albums/create-new-album.js";
 export * from "./photos/get-all-photos.js";
 export * from "./photos/get-photo-by-id.js";
 export * from "./todos/get-all-todos.js";
