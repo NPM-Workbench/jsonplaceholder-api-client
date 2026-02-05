@@ -21,6 +21,7 @@ export * from "./posts/update-post.js";
 export * from "./posts/get-all-posts.js";
 export * from "./posts/get-post-by-id.js";
 export * from "./posts/create-new-post.js";
+export * from "./todos/update-todo-partial.js";
 export * from "./todos/update-todo.js";
 export * from "./todos/get-all-todos.js";
 export * from "./todos/get-todo-by-id.js";
