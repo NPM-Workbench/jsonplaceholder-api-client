@@ -82,7 +82,12 @@ const response = await getCommentById({ id: number });
 3. Create Comment
 ```javascript
 import { createNewComment } from "jsonplaceholder-api-client";
-const response = await createNewComment({postId: number, name: string, email: string, body: string});
+const response = await createNewComment({
+  postId: number,
+  name: string,
+  email: string,
+  body: string
+});
 /* All required fields. Changes not persisted (JSONPlaceholder behavior) */
 ```
 4. Update Comment
