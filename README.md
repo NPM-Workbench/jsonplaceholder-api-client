@@ -48,7 +48,7 @@ const response = await updateAlbum({
   id: number,
   data: { id: number, title: string, userId: number }
 })
-/* All required fields should be provided. Changes are not persisted (JSONPlaceholder behavior). */
+/* All required fields. Changes not persisted (JSONPlaceholder behavior) */
 ```
 5. Partial Update Album
 ```javascript
@@ -57,13 +57,14 @@ const response = await updateAlbumPartial({
   id: number,
   data: { title?: string, userId?: number }
 })
-/* Need to give atleast 1 of the data fields. Changes are not persisted (JSONPlaceholder behavior). */
+/* Need to give atleast 1 of the data fields. */
+/* Changes are not persisted (JSONPlaceholder behavior). */
 ```
 6. Delete Album
 ```javascript
 import { deleteAlbum } from "jsonplaceholder-api-client";
 const response = await deleteAlbum({ id: number });
-/* Designed to reflect request success, not persistence. Changes are not persisted (JSONPlaceholder behavior). */
+/* Mock delete endpoint. Changes are not persisted (JSONPlaceholder behavior). */
 ```
 <br/>📁 Resource Name: Comments<br/>
 1. Get All Comments
@@ -82,7 +83,7 @@ const response = await getCommentById({ id: number });
 ```javascript
 import { createNewComment } from "jsonplaceholder-api-client";
 const response = await createNewComment({postId: number, name: string, email: string, body: string});
-/* All required fields should be provided. Changes are not persisted (JSONPlaceholder behavior). */
+/* All required fields. Changes not persisted (JSONPlaceholder behavior) */
 ```
 4. Update Comment
 ```javascript
@@ -91,7 +92,7 @@ const response = await updateComment({
   id: number,
   data: {id: number, postId: number, name: string, email: string, body: string}
 })
-/* All required fields should be provided. Changes are not persisted (JSONPlaceholder behavior). */
+/* All required fields. Changes not persisted (JSONPlaceholder behavior) */
 ```
 5. Partial Update Comment
 ```javascript
@@ -100,11 +101,12 @@ const response = await updateCommentPartial({
   id: number,
   data: {postId?: number, name?: string, email?: string, body?: string}
 })
-/* Need to give atleast 1 of the data fields. Changes are not persisted (JSONPlaceholder behavior). */
+/* Need to give atleast 1 of the data fields. */
+/* Changes are not persisted (JSONPlaceholder behavior). */
 ```
 6. Delete Comment
 ```javascript
 import { deleteComment } from "jsonplaceholder-api-client";
 const response = await deleteComment({ id: number });
-/* Designed to reflect request success, not persistence. Changes are not persisted (JSONPlaceholder behavior). */
+/* Mock delete endpoint. Changes are not persisted (JSONPlaceholder behavior). */
 ```
