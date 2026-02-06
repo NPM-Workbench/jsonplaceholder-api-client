@@ -46,8 +46,8 @@ const response = await getAlbumById({ id: number });
 ```
 3. Create Album
 ```javascript
-import { createAlbum } from "jsonplaceholder-api-client";
-const response = await createAlbum({
+import { createNewAlbum } from "jsonplaceholder-api-client";
+const response = await createNewAlbum({
   title: string,
   userId: number,
 });
@@ -206,7 +206,7 @@ const response = await createNewPost({
 import { updatePost } from "jsonplaceholder-api-client";
 const response = await updatePost({
   id: number,
-  data: { id: number, userId: number, title: string, body: string }te
+  data: { id: number, userId: number, title: string, body: string }
 });
 /* All required fields. Changes not persisted (JSONPlaceholder behavior) */
 ```
@@ -253,7 +253,7 @@ const response = await createNewTodo({
 4. Update Todo
 ```javascript
 import { updateTodo } from "jsonplaceholder-api-client";
-const response = await updatePost({
+const response = await updateTodo({
   id: number,
   data: { id: number, userId: number, title: string, completed: boolean }
 });
