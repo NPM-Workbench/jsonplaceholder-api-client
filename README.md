@@ -38,7 +38,7 @@ import { createAlbum } from "jsonplaceholder-api-client";
 const response = await createAlbum({
   title: string,
   userId: number,
-})
+});
 /* All required fields. Changes not persisted (JSONPlaceholder behavior) */
 ```
 4. Update Album
@@ -47,7 +47,7 @@ import { updateAlbum } from "jsonplaceholder-api-client";
 const response = await updateAlbum({
   id: number,
   data: { id: number, title: string, userId: number }
-})
+});
 /* All required fields. Changes not persisted (JSONPlaceholder behavior) */
 ```
 5. Partial Update Album
@@ -56,7 +56,7 @@ import { updateAlbumPartial } from "jsonplaceholder-api-client";
 const response = await updateAlbumPartial({
   id: number,
   data: { title?: string, userId?: number }
-})
+});
 /* Need to give atleast 1 of the data fields. */
 /* Changes are not persisted (JSONPlaceholder behavior). */
 ```
@@ -96,7 +96,7 @@ import { updateComment } from "jsonplaceholder-api-client";
 const response = await updateComment({
   id: number,
   data: {id: number, postId: number, name: string, email: string, body: string}
-})
+});
 /* All required fields. Changes not persisted (JSONPlaceholder behavior) */
 ```
 5. Partial Update Comment
@@ -105,7 +105,7 @@ import { updateCommentPartial } from "jsonplaceholder-api-client";
 const response = await updateCommentPartial({
   id: number,
   data: {postId?: number, name?: string, email?: string, body?: string}
-})
+});
 /* Need to give atleast 1 of the data fields. */
 /* Changes are not persisted (JSONPlaceholder behavior). */
 ```
@@ -113,5 +113,55 @@ const response = await updateCommentPartial({
 ```javascript
 import { deleteComment } from "jsonplaceholder-api-client";
 const response = await deleteComment({ id: number });
+/* Mock delete endpoint. Changes are not persisted (JSONPlaceholder behavior). */
+```
+
+<br/>📁 Resource Name: Photos<br/>
+1. Get All Photos
+```javascript
+import { getAllPhotos } from "jsonplaceholder-api-client";
+const response = await getAllPhotos();
+/* Returns an array of photo objects */
+```
+2. Get Photo By ID
+```javascript
+import { getPhotoById } from "jsonplaceholder-api-client";
+const response = await getPhotoById({ id: number });
+/* If the photo does not exist, photo is returned as null */
+```
+3. Create Photo
+```javascript
+import { createNewPhoto } from "jsonplaceholder-api-client";
+const response = await createNewPhoto({
+  albumId: number,
+  title: string,
+  url: string,
+  thumbnailUrl: string
+});
+/* All required fields. Changes not persisted (JSONPlaceholder behavior) */
+```
+4. Update Photo
+```javascript
+import { updatePhoto } from "jsonplaceholder-api-client";
+const response = await updatePhoto({
+  id: number,
+  data: { id: number, albumId: number, title: string, url: string, thumbnailUrl: string }
+});
+/* All required fields. Changes not persisted (JSONPlaceholder behavior) */
+```
+5. Partial Update Photo
+```javascript
+import { updatePhotoPartial } from "jsonplaceholder-api-client";
+const response = await updatePhotoPartial({
+  id: number,
+  data: { albumId?: number, title?: string, url?: string, thumbnailUrl?: string }
+});
+/* Need to give atleast 1 of the data fields. */
+/* Changes are not persisted (JSONPlaceholder behavior). */
+```
+6. Delete Photo
+```javascript
+import { deletePhoto } from "jsonplaceholder-api-client";
+const response = await deletePhoto({ id: number });
 /* Mock delete endpoint. Changes are not persisted (JSONPlaceholder behavior). */
 ```
