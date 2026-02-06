@@ -19,6 +19,7 @@ export * from "./photos/update-photo.js";
 export * from "./photos/get-all-photos.js";
 export * from "./photos/get-photo-by-id.js";
 export * from "./photos/create-new-photo.js";
+export * from "./posts/delete-post.js";
 export * from "./posts/update-post-partial.js";
 export * from "./posts/update-post.js";
 export * from "./posts/get-all-posts.js";
