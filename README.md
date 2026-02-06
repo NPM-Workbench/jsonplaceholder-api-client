@@ -203,7 +203,7 @@ const response = await updatePost({
 import { updatePostPartial } from "jsonplaceholder-api-client";
 const response = await updatePostPartial({
   id: number,
-  data: { userId?: number, title?: string, body?: string 
+  data: { userId?: number, title?: string, body?: string }
 });
 /* Need to give atleast 1 of the data fields. */
 /* Changes are not persisted (JSONPlaceholder behavior). */
