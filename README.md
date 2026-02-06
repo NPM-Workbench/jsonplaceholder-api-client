@@ -22,6 +22,14 @@ async function quickStart() {
 
 /* call */
 await quickStart();
+
+/* Sample Response Schema
+{
+  code: "api-ok",
+  message: "No error encountered",
+  payload: ...
+}
+*/
 ```
 
 ### 🎲 Features
