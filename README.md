@@ -18,6 +18,18 @@ npm install --save jsonplaceholder-api-client
 6. Uses the native fetch API without adding unnecessary runtime dependencies.
 7. Designed for demos, tutorials, SDK experiments and frontend testing.
 
+### 📖 What is JSONPlaceholder?
+JSONPlaceholder is a free, public fake REST API that provides realistic but non-persistent data for common resources such as posts, comments, users, albums, photos, and todos. This is widely used by developers to practice working with REST APIs.
+
+### 💡 Why This Exists?
+JSONPlaceholder is an excellent fake REST API, but using it directly often means repeating the same boilerplate: manual fetch calls, ad-hoc response handling, loose typing, and inconsistent patterns across resources.<br/>
+This package exists to solve that by providing:
+1. **Strong TypeScript typings** for all resources and operations
+2. **Consistent, predictable response shapes** across every endpoint
+3. **Clear, intention-revealing helper functions** instead of raw HTTP calls
+<br/>
+The goal is not abstraction for abstraction’s sake, but to make working with JSONPlaceholder feel more structured, expressive, and developer-friendly — especially for learning, prototyping, demos, and SDK experimentation.
+
 ### 💻 Usage
 📁 Resource Name: Albums<br/>
 1. Get All Albums
