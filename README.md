@@ -10,10 +10,10 @@ npm install --save jsonplaceholder-api-client
 ```
 
 ### 🎲 Features
-1. Built with strong TypeScript typings from the ground up for safer and more predictable usage.
-2. Covers the full REST surface for common JSONPlaceholder resources: ```GET, POST, PUT, PATCH and DELETE```.
-3. Functions return predictable, uniform response structures to simplify error handling and data access.
-4. ID-based fetches normalize empty API responses to null, making missing resources explicit and easy to handle.
-5. Clean, intention-revealing functions for posts, comments, albums, photos, todos, and users.
+1. Built with strong TypeScript typings from the ground up.
+2. Full REST surface for common JSONPlaceholder resources: ```GET, POST, PUT, PATCH and DELETE```.
+3. Uniform response structures to simplify error handling and data access.
+4. ID-based fetches normalize empty API responses, making missing resources easy to handle.
+5. Clean, intention-revealing functions.
 6. Uses the native fetch API without adding unnecessary runtime dependencies.
-7. Designed for demos, tutorials, SDK experiments and frontend testing using JSONPlaceholder’s fake REST API.
+7. Designed for demos, tutorials, SDK experiments and frontend testing.
