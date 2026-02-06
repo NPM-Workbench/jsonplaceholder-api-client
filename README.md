@@ -39,7 +39,7 @@ const response = await createAlbum({
   title: string,
   userId: number,
 })
-/* All required fields should be provided. Changes are not persisted (JSONPlaceholder behavior) */
+/* All required fields. Changes not persisted (JSONPlaceholder behavior) */
 ```
 4. Update Album
 ```javascript
