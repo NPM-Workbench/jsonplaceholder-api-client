@@ -31,6 +31,7 @@ export * from "./todos/update-todo.js";
 export * from "./todos/get-all-todos.js";
 export * from "./todos/get-todo-by-id.js";
 export * from "./todos/create-new-todo.js";
+export * from "./users/delete-user.js";
 export * from "./users/update-user-partial.js";
 export * from "./users/update-user.js";
 export * from "./users/get-all-users.js";
