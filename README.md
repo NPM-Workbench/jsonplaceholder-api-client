@@ -9,6 +9,21 @@ This package is a TypeScript-first wrapper around the [JSONPlaceholder](https://
 npm install --save jsonplaceholder-api-client
 ```
 
+### 👁 Quick Start
+```javascript
+/* node modules */
+import { getAllPosts } from "jsonplaceholder-api-client";
+
+/* fn */
+async function quickStart() {
+  const response = await getAllPosts();
+  console.log(response);
+}
+
+/* call */
+await quickStart();
+```
+
 ### 🎲 Features
 1. Built with strong TypeScript typings from the ground up.
 2. Full REST surface for common JSONPlaceholder resources: ```GET, POST, PUT, PATCH and DELETE```.
