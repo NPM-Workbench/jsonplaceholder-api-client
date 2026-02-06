@@ -214,3 +214,52 @@ import { deletePost } from "jsonplaceholder-api-client";
 const response = await deletePost({ id: number });
 /* Mock delete endpoint. Changes are not persisted (JSONPlaceholder behavior). */
 ```
+
+<br/>📁 Resource Name: Todos<br/>
+1. Get All Todos
+```javascript
+import { getAllTodos } from "jsonplaceholder-api-client";
+const response = await getAllTodos();
+/* Returns an array of todo objects */
+```
+2. Get Todo By ID
+```javascript
+import { getTodoById } from "jsonplaceholder-api-client";
+const response = await getTodoById({ id: number });
+/* If the todo does not exist, todo is returned as null */
+```
+3. Create Todo
+```javascript
+import { createNewTodo } from "jsonplaceholder-api-client";
+const response = await createNewTodo({
+  userId: number,
+  title: string,
+  completed: boolean,
+});
+/* All required fields. Changes not persisted (JSONPlaceholder behavior) */
+```
+4. Update Todo
+```javascript
+import { updateTodo } from "jsonplaceholder-api-client";
+const response = await updatePost({
+  id: number,
+  data: { id: number, userId: number, title: string, completed: boolean }
+});
+/* All required fields. Changes not persisted (JSONPlaceholder behavior) */
+```
+5. Partial Update Post
+```javascript
+import { updateTodoPartial } from "jsonplaceholder-api-client";
+const response = await updateTodoPartial({
+  id: number,
+  data: { userId?: number, title?: string, completed?: boolean }
+});
+/* Need to give atleast 1 of the data fields. */
+/* Changes are not persisted (JSONPlaceholder behavior). */
+```
+6. Delete Post
+```javascript
+import { deleteTodo } from "jsonplaceholder-api-client";
+const response = await deleteTodo({ id: number });
+/* Mock delete endpoint. Changes are not persisted (JSONPlaceholder behavior). */
+```
