@@ -263,3 +263,95 @@ import { deleteTodo } from "jsonplaceholder-api-client";
 const response = await deleteTodo({ id: number });
 /* Mock delete endpoint. Changes are not persisted (JSONPlaceholder behavior). */
 ```
+
+<br/>📁 Resource Name: Users<br/>
+1. Get All Users
+```javascript
+import { getAllUsers } from "jsonplaceholder-api-client";
+const response = await getAllUsers();
+/* Returns an array of user objects */
+```
+2. Get User By ID
+```javascript
+import { getUserById } from "jsonplaceholder-api-client";
+const response = await getUserById({ id: number });
+/* If the user does not exist, user is returned as null */
+```
+3. Create User
+```javascript
+import { createNewUser } from "jsonplaceholder-api-client";
+const response = await createNewUser({
+  name: string,
+  username: string,
+  email: string
+});
+/* All required fields. Changes not persisted (JSONPlaceholder behavior) */
+```
+4. Update User
+```javascript
+import { updateUser } from "jsonplaceholder-api-client";
+const response = await updateUser({
+  id: number,
+  data: {
+    id: number
+    name: string
+    username: string
+    email: string
+    address: {
+      street: string
+      suite: string
+      city: string
+      zipcode: string
+      geo: {
+        lat: string
+        lng: string
+      }
+    }
+    phone: string
+    website: string
+    company: {
+      name: string
+      catchPhrase: string
+      bs: string
+    }
+  }
+});
+/* All required fields. Changes not persisted (JSONPlaceholder behavior) */
+```
+5. Partial Update User
+```javascript
+import { updateUserPartial } from "jsonplaceholder-api-client";
+const response = await updateUserPartial({
+  id: number,
+  data: {
+    name?: string
+    username?: string
+    email?: string
+    address?: {
+      street?: string
+      suite?: string
+      city?: string
+      zipcode?: string
+      geo?: {
+        lat?: string
+        lng?: string
+      }
+    }
+    phone?: string
+    website?: string
+    company?: {
+      name?: string
+      catchPhrase?: string
+      bs?: string
+    }
+  }
+});
+/* Need to give atleast 1 of the data fields. */
+/* Changes are not persisted (JSONPlaceholder behavior). */
+```
+6. Delete User
+```javascript
+import { deleteUser } from "jsonplaceholder-api-client";
+const response = await deleteUser({ id: number });
+/* Mock delete endpoint. Changes are not persisted (JSONPlaceholder behavior). */
+```
