@@ -39,7 +39,7 @@ const response = await createAlbum({
   title: string,
   userId: number,
 })
-/* Returns the created album with a mock id. Changes are not persisted (JSONPlaceholder behavior) */
+/* All required fields should be provided. Changes are not persisted (JSONPlaceholder behavior) */
 ```
 4. Update Album
 ```javascript
@@ -63,5 +63,48 @@ const response = await updateAlbumPartial({
 ```javascript
 import { deleteAlbum } from "jsonplaceholder-api-client";
 const response = await deleteAlbum({ id: number });
+/* Designed to reflect request success, not persistence. Changes are not persisted (JSONPlaceholder behavior). */
+```
+<br/>📁 Resource Name: Comments<br/>
+1. Get All Comments
+```javascript
+import { getAllComments } from "jsonplaceholder-api-client";
+const response = await getAllComments();
+/* Returns an array of comment objects */
+```
+2. Get Comment By ID
+```javascript
+import { getCommentById } from "jsonplaceholder-api-client";
+const response = await getCommentById({ id: number });
+/* If the comment does not exist, comment is returned as null */
+```
+3. Create Comment
+```javascript
+import { createNewComment } from "jsonplaceholder-api-client";
+const response = await createNewComment({postId: number, name: string, email: string, body: string});
+/* All required fields should be provided. Changes are not persisted (JSONPlaceholder behavior). */
+```
+4. Update Comment
+```javascript
+import { updateComment } from "jsonplaceholder-api-client";
+const response = await updateComment({
+  id: number,
+  data: {id: number, postId: number, name: string, email: string, body: string}
+})
+/* All required fields should be provided. Changes are not persisted (JSONPlaceholder behavior). */
+```
+5. Partial Update Comment
+```javascript
+import { updateCommentPartial } from "jsonplaceholder-api-client";
+const response = await updateCommentPartial({
+  id: number,
+  data: {postId?: number, name?: string, email?: string, body?: string}
+})
+/* Need to give atleast 1 of the data fields. Changes are not persisted (JSONPlaceholder behavior). */
+```
+6. Delete Comment
+```javascript
+import { deleteComment } from "jsonplaceholder-api-client";
+const response = await deleteComment({ id: number });
 /* Designed to reflect request success, not persistence. Changes are not persisted (JSONPlaceholder behavior). */
 ```
