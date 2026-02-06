@@ -355,3 +355,10 @@ import { deleteUser } from "jsonplaceholder-api-client";
 const response = await deleteUser({ id: number });
 /* Mock delete endpoint. Changes are not persisted (JSONPlaceholder behavior). */
 ```
+
+### 📘 Contributing
+Contributions, suggestions, and improvements are welcome.<br/>
+Feel free to open issues or pull requests.
+
+### ❤️ Support
+Like this project? Support it with a github star, it would mean a lot to me! Cheers and Happy Coding.
