@@ -247,7 +247,7 @@ const response = await updatePost({
 });
 /* All required fields. Changes not persisted (JSONPlaceholder behavior) */
 ```
-5. Partial Update Post
+5. Partial Update Todo
 ```javascript
 import { updateTodoPartial } from "jsonplaceholder-api-client";
 const response = await updateTodoPartial({
@@ -257,7 +257,7 @@ const response = await updateTodoPartial({
 /* Need to give atleast 1 of the data fields. */
 /* Changes are not persisted (JSONPlaceholder behavior). */
 ```
-6. Delete Post
+6. Delete Todo
 ```javascript
 import { deleteTodo } from "jsonplaceholder-api-client";
 const response = await deleteTodo({ id: number });
