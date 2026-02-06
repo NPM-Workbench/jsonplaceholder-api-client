@@ -165,3 +165,52 @@ import { deletePhoto } from "jsonplaceholder-api-client";
 const response = await deletePhoto({ id: number });
 /* Mock delete endpoint. Changes are not persisted (JSONPlaceholder behavior). */
 ```
+
+<br/>📁 Resource Name: Posts<br/>
+1. Get All Posts
+```javascript
+import { getAllPosts } from "jsonplaceholder-api-client";
+const response = await getAllPosts();
+/* Returns an array of post objects */
+```
+2. Get Post By ID
+```javascript
+import { getPostById } from "jsonplaceholder-api-client";
+const response = await getPostById({ id: number });
+/* If the post does not exist, post is returned as null */
+```
+3. Create Post
+```javascript
+import { createNewPost } from "jsonplaceholder-api-client";
+const response = await createNewPost({
+  userId: number,
+  title: string,
+  body: string,
+});
+/* All required fields. Changes not persisted (JSONPlaceholder behavior) */
+```
+4. Update Post
+```javascript
+import { updatePost } from "jsonplaceholder-api-client";
+const response = await updatePost({
+  id: number,
+  data: { id: number, userId: number, title: string, body: string }te
+});
+/* All required fields. Changes not persisted (JSONPlaceholder behavior) */
+```
+5. Partial Update Post
+```javascript
+import { updatePostPartial } from "jsonplaceholder-api-client";
+const response = await updatePostPartial({
+  id: number,
+  data: { userId?: number, title?: string, body?: string 
+});
+/* Need to give atleast 1 of the data fields. */
+/* Changes are not persisted (JSONPlaceholder behavior). */
+```
+6. Delete Post
+```javascript
+import { deletePost } from "jsonplaceholder-api-client";
+const response = await deletePost({ id: number });
+/* Mock delete endpoint. Changes are not persisted (JSONPlaceholder behavior). */
+```
