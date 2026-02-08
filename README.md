@@ -526,6 +526,7 @@ const response = await deleteUser({ id: number });
  PASS  src/todos/test/delete-todo.test.ts
  PASS  src/todos/test/get-todo-by-id.test.ts
 ```
+If you would like to see a detailed report of the unit tests created and their respective file coverage, visit this [test-coverage](https://github.com/NPM-Workbench/jsonplaceholder-api-client/tree/master/test-report-md) link.
 
 ### 📘 Contributing
 
