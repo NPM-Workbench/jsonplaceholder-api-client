@@ -1,6 +1,6 @@
 {
   "name": "jsonplaceholder-api-client",
-  "description": "",
+  "description": "A lightweight, TypeScript-first SDK that wraps the JSONPlaceholder fake REST API, offering clean, predictable CRUD helpers for learning, prototyping, and testing.",
   "keywords": [
     "jsonplaceholder",
     "jsonplaceholder-api",
@@ -23,7 +23,7 @@
     "demo"
   ],
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "0.9.0-beta.1",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
