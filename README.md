@@ -488,7 +488,7 @@ const response = await deleteUser({ id: number });
 ### 📗 Test Coverage
 
 ```
-S  src/todos/test/update-todo.test.ts
+ PASS  src/todos/test/update-todo.test.ts
  PASS  src/users/test/update-user.test.ts
  PASS  src/users/test/get-all-users.test.ts
  PASS  src/users/test/get-user-by-id.test.ts
