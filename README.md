@@ -1,5 +1,7 @@
 ![json-placeholder-api-client-banner](https://github.com/user-attachments/assets/a26a1bfd-58d1-4e7b-b83e-b003d774cd40)
-
+![npm](https://img.shields.io/npm/v/jsonplaceholder-api-client)
+![downloads](https://img.shields.io/npm/dw/jsonplaceholder-api-client)
+![license](https://img.shields.io/npm/l/jsonplaceholder-api-client)
 # jsonplaceholder-API-client
 
 This package is a TypeScript-first wrapper around the [JSONPlaceholder](https://jsonplaceholder.typicode.com/) fake REST API. It provides clean, predictable helper functions for working with common resources such as posts, comments, albums, photos, todos, and users, covering the full CRUD surface `(GET, POST, PUT, PATCH, DELETE)`.
