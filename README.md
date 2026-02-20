@@ -8,9 +8,6 @@ This package is a TypeScript-first wrapper around the [JSONPlaceholder](https://
 <br/><br/>
 🌱 The goal of this library is not to replace JSONPlaceholder itself, but to offer a **Developer-Friendly SDK** with consistent response shapes, sensible defaults, and strong TypeScript typing — making it useful for learning, prototyping, demos, and testing frontend or SDK patterns.
 
-### 📻 **Beta Release**
-To encourage developers to download and utilize this package that is made available for your benefit. Additionally, you can post feedback on any issues you encounter so that the needed corrections can be done. Official release will be announced in sometime.
-
 ### 📦 Installation
 
 ```console
